@@ -1,0 +1,7 @@
+Safe to delete from the repo copy
+
+These all go together, and the web pair is the important one:
+
+libjfxwebkit.so (the 124.7 MB file)
+javafx.web.jar
+jdk.jsobject.jar (only used with javafx.web)
