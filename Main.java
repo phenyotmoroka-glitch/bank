@@ -5,10 +5,10 @@ import javafx.stage.Stage;
  
 public class App extends Application {
  
- Scene Window;
+ Stage FNB;
     @Override
     public void start(Stage stage) {
-    	stage = Window;//idk one before the other or something
+    	stage = FNB;//idk one before the other or something
         View view = new View();            // builds all x screens 
         new Controller(view);              // attaches every button action, i think
  
@@ -16,7 +16,7 @@ public class App extends Application {
         scroll.setFitToWidth(true);        // stretch to window width if theres too much content or something
  
         stage.setTitle("Banking System");
-        stage.setScene(new Scene(scroll, 800, 650));   // one Scene, created once (name it something)
+        stage.setScene(new Scene(scroll, 800, 650));   // one Scene, created once (name it something) or not
         stage.show();
     }
  
