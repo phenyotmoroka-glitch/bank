@@ -16,7 +16,7 @@ public class App extends Application {
         scroll.setFitToWidth(true);        // stretch to window width if theres too much content or something
  
         stage.setTitle("Banking System");
-        stage.setScene(new Scene(scrl, 800, 650));   // one Scene, created once (name it something) or not
+        stage.setScene(new Scene(scrl, 1080, 720));   // one Scene, created once (name it something) or not
         stage.show();
     }
  
