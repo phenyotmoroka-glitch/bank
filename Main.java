@@ -12,11 +12,11 @@ public class App extends Application {
         View view = new View();            // builds all x screens 
         new Controller(view);              // attaches every button action, i think
  
-        ScrollPane scroll = new ScrollPane(view.getRoot());
+        ScrollPane scrl = new ScrollPane(view.getRoot());
         scroll.setFitToWidth(true);        // stretch to window width if theres too much content or something
  
         stage.setTitle("Banking System");
-        stage.setScene(new Scene(scroll, 800, 650));   // one Scene, created once (name it something) or not
+        stage.setScene(new Scene(scrl, 800, 650));   // one Scene, created once (name it something) or not
         stage.show();
     }
  
