@@ -7,8 +7,8 @@ private double withdraw;
 private String surname;
 private String address;
 private String email;
-private  int id;
-private int phoneNo;
+private  String id;
+private int phoneNo;                      //username and password?
 
 //so far i cant figure out the parameters. withdraw and deposit dont need settersby what i see. idk. nothing does
 //ive decided to add name as an account field
@@ -16,6 +16,8 @@ Account(String name){  this.name = name; this.balance = 0;  }
 
 Account(String name, double balance){ this.name = name; this.balance = balance;  }
 
+
+//TRANSACTIONS ke deposit, withdrawal and transfer
 	public boolean deposit(double deposit)
 	{
 		if (deposit > 0)
