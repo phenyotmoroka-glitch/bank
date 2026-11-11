@@ -3,8 +3,12 @@ public class Account {
 
 private String name;
 private double withdraw;
-private double deposit;
-private double balance;
+
+private String surname;
+private String address;
+private String email;
+private  int id;
+private int phoneNo;
 
 //so far i cant figure out the parameters. withdraw and deposit dont need settersby what i see. idk. nothing does
 //ive decided to add name as an account field
@@ -34,8 +38,7 @@ Account(String name, double balance){ this.name = name; this.balance = balance; 
 
 		
 			public double getBalance(){return balance;}
-			// public double getWithdraw(){return withdraw;}
-			// public double getDeposit(){return deposit;}       //ga o di tlhoke
+			
 			public String getName(){return name;}
 
 public void acInfo(){  //
