@@ -5,4 +5,7 @@ import java.sql.PreparedStatement; //or preparedstatement ig
 
 
 
-//connecting to the database
+Connection con = DriverManager.getConnection("jdbc:sqlite:bank.db");  //connecting to the database
+                  //use plain text passwords please
+
+
