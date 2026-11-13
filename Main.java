@@ -1,27 +1,53 @@
 import javafx.application.Application;
-import javafx.scene.Scene;
-import javafx.scene.control.ScrollPane;
 import javafx.stage.Stage;
- 
-public class App extends Application {
- 
- Stage FNB;
-    @Override
-    public void start(Stage stage) {
-    	stage = FNB;//idk one before the other or something
-        View view = new View();            // builds all x screens 
-        new Controller(view);              // attaches every button action, i think
- 
-        ScrollPane scrl = new ScrollPane(view.getRoot());
-        scroll.setFitToWidth(true);        // stretch to window width if theres too much content or something
- 
-        stage.setTitle("Banking System");
-        stage.setScene(new Scene(scrl, 1080, 720));   // one Scene, created once (name it something) or not
-        stage.show();
-    }
- 
-    public static void main(String[] phenyo) {
-        launch(phenyo);
-    }
+import javafx.scene.Scene;
+
+
+//view
+import javafx.scene.layout.VBox;
+import javafx.geometry.Insets;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
+import javafx.scene.control.Label;
+// import javafx.scene.control.ScrollPane;
+
+public class Main extends Application{
+
+//elements(view)
+    Button btn = new Button("Press me please");
+    TextField txf = new TextField();  //TODO:do u take any arguments
+    Label lbl = new Label("Home Page");
+
+
+
+@Override
+public void start(Stage window){
+        //scrollpane(optional ig)
+
+        //layout
+        VBox root = new VBox(20);
+        root.setPadding(new Insets(20));
+        root.getChildren().addAll(btn, txf, lbl);
+
+
+        //scene
+    Scene scn = new Scene(root, 1080,720);
+    scn.getStylesheets().add(getClass().getResource("styles.css").toExternalForm());
+lbl.getStyleClass().add("title");
+
+    window.setTitle("Banking App");
+    window.setScene(scn);
+    window.show();
+
+
+
 }
 
+
+
+
+
+
+
+    public static void main(String[]phenyo){launch(phenyo);}
+}
