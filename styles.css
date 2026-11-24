@@ -6,14 +6,27 @@
     -fx-faint-focus-color: transparent;
     -fx-fx-font-size :14px; 
 
+
 }
 
-.lbl { -fx-text-fill: #f8f8f2; }
+#pagelbl, #welcome{ 
+-fx-font-size: 30px;
+    -fx-font-weight: bold;
+
+
+     }
+
+#welcome{ 
+-fx-font-size: 20px;
+    
+
+     }
+
 
 .title {
     -fx-font-size: 30px;
     -fx-font-weight: bold;
-    -fx-text-fill: #bd93f9;
+    
 }
 
 .muted { -fx-text-fill: #6272a4; }
@@ -35,3 +48,28 @@
     -fx-background-color: #6272a4;
 }
 
+
+.text-field, .password-field {
+    -fx-prompt-text-fill: #6f86a8; }
+
+
+
+#password {
+    -fx-prompt-text-fill: #8a7fb0;
+}
+
+#nav{
+    -fx-background-color: #21222c;
+    -fx-spacing: 40;
+    -fx-padding: 12 30;
+    -fx-border-color: #44475a;
+    /*-fx-border-width: 0 0 1 0; */
+}
+
+#footer{
+   fx-background-color: #1c1e29;
+    /*-fx-padding: 12 30;*/
+    -fx-border-color: #2f3242;
+    -fx-border-width: 1 0 0 0;
+
+}

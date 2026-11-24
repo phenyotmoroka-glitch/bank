@@ -3,15 +3,7 @@ public class Account {
 
 
 
-                   //username and password?
-
-
-Account(String name){  this.name = name; this.balance = 0;  }
-
-Account(String name, double balance){ this.name = name; this.balance = balance;  }
-
-
-//TRANSACTIONS ke deposit, withdrawal le transfer
+//TRANSACTIONS deposit, withdrawal le transfer
 	public boolean deposit(double deposit)
 	{
 		if (deposit > 0)
@@ -35,7 +27,7 @@ Account(String name, double balance){ this.name = name; this.balance = balance; 
 		
 			public double getBalance(){return balance;}
 			
-			public String getName(){return name;}
+		
 
 public void acInfo(){  //
  

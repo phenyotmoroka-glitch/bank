@@ -1,53 +1,35 @@
 import javafx.application.Application;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
 
 
-//view
-import javafx.scene.layout.VBox;
-import javafx.geometry.Insets;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
-import javafx.scene.control.Label;
-// import javafx.scene.control.ScrollPane;
+
 
 public class Main extends Application{
-
-//elements(view)
-   
-    Label lbl = new Label("Home Page");
-    Button btn = new Button("Do not press this");
-    TextField txf = new TextField();  //TODO:do u take any arguments
 
 
 
 @Override
 public void start(Stage window){
 
-    //view                                      //controller
-           txf.setPromptText("Leina?");          btn.setOnAction(e -> {
-                                                                        Alert alt = new Alert(Alert.AlertType.INFORMATION);
-            lbl.getStyleClass().add("title");                                 alt.setTitle("Bruh");
-                                                                            alt.setHeaderText(null);
-                                                                            alt.setContentText("Why did you press that?");
-                                                                            alt.showAndWait(); // This actually pops up the window
-                                                                        } );
-    
-
-
-        //scrollpane(optional ig)
-
-        //layout
-        VBox root = new VBox(20);
-        root.setPadding(new Insets(20));
-        root.getChildren().addAll(lbl, txf, btn);
-
-
+LogScreen logview = new LogScreen();
+RegScreen regView = new RegScreen();
+DashScreen dashView = new DashScreen();
+// OpenAccountScreen oAccView = new OpenAccountScreen();
+// DepositScreen depView = new DepositScreen();
+// WithdrawalScreen withView = new WithdrawalScreen();
+// TransferScreen transView = new TransferScreen();
+// HistoryScreen hisView = new HistoryScreen();
+ 
         //scene
-    Scene scn = new Scene(root, 1080,720);
+     
+    Scene scn = new Scene(dashView.root, 1080,720);
     scn.getStylesheets().add(getClass().getResource("styles.css").toExternalForm());
     
+
+// new Controller(logview, regView, dashView, oAccView, depView, withView, transView, hisView, scn);
+    // new Controller(logview, scn);
+
     window.setTitle("Banking App");
     window.setScene(scn);
     window.show();
